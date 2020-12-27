@@ -1,0 +1,29 @@
+{
+  "name": "node-kenpom",
+  "version": "1.0.0",
+  "description": "Abstracts the scraping of the front page of KenPom.com",
+  "main": "node-kenpom.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esqew/node-kenpom.git"
+  },
+  "keywords": [
+    "kenpom",
+    "basketball",
+    "scrape"
+  ],
+  "author": "Sean F Quinn <sean@esqew.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esqew/node-kenpom/issues"
+  },
+  "homepage": "https://github.com/esqew/node-kenpom#readme"
+}
