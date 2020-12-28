@@ -1,11 +1,19 @@
 # node-kenpom
 Abstracts the scraping of the team ratings from the KenPom.com homepage into a convenient module.
 
+-----
+
 ## Important information
-Use this package **AT YOUR OWN RISK**. The creator nor the maintainers of this package make any guarantee as to the package's functionality, and you are solely responsible for what you use this package for.
+Use this package **AT YOUR OWN RISK**. The creator nor the maintainers of this package make any guarantee as to the package's functionality, and you are solely responsible for what you use this package for. Please use this scraper responsibly and ensure any scripts in which you leverage this module that there is appropriate caching and rate-limiting.
+
+-----
 
 ## Installation
-Install the module from this repository by running the following in your project directory:
+Install the module from NPM by running the following command in your project directory:
+
+    npm install --save node-kenpom
+
+Alternatively, you can also add the module from the GitHub `master` branch like so:
 
     npm install git+https://github.com/esqew/node-kenpom.git
 
