@@ -1,6 +1,6 @@
 {
   "name": "node-kenpom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Abstracts the scraping of the front page of KenPom.com",
   "main": "node-kenpom.js",
   "dependencies": {
