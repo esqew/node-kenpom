@@ -85,7 +85,3 @@ class Record {
 }
 
 module.exports = {getData, Record};
-
-(async () => {
-    console.dir(await getData());
-})()
