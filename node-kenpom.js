@@ -1,4 +1,4 @@
-const axios = require('axios');
+const https = require('https');
 const cheerio = require('cheerio');
 
 /**
@@ -7,11 +7,19 @@ const cheerio = require('cheerio');
  * @returns {Object} An Object containing information about the scrape, as well as the scraped data.
  */
 const getData = async () => {
-    return new Promise((resolve) => {
-        axios.get('https://kenpom.com')
-            .then(result => {
+    return new Promise((resolve, reject) => {
+        https.get('https://kenpom.com', result => {
+            var data = '';
+
+            result.on('data', chunk => {
+                data += chunk;
+            });
+
+            result.on('error', err => reject(err));
+
+            result.on('end', () => {
                 const scrapeTime = new Date();
-                const $ = cheerio.load(result.data);
+                const $ = cheerio.load(data);
                 var teams = [];
                 var headerCategoryCells = $("#ratings-table thead tr.thead1")[0].children.filter(_ => _.type === 'tag' && _.name == 'th');
                 var headerCategories = [];
@@ -60,10 +68,11 @@ const getData = async () => {
                 resolve({
                     scrapeTime: scrapeTime,
                     asOfString: $("span.update").text(),
-                    teams:      teams
+                    teams: teams
                 });
                 return;
             })
+        });
     });
 };
 
@@ -84,4 +93,4 @@ class Record {
     }
 }
 
-module.exports = {getData, Record};
+module.exports = { getData, Record };

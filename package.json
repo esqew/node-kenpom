@@ -1,10 +1,9 @@
 {
   "name": "node-kenpom",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Abstracts the scraping of the front page of KenPom.com",
   "main": "node-kenpom.js",
   "dependencies": {
-    "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5"
   },
   "devDependencies": {},
